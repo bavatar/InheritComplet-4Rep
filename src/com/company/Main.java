@@ -8,6 +8,12 @@ public class Main {
     //
     // Part 3
     // Using the code from the previous 2 completion activities, convert the Product superclass to an abstract class.
+    //
+    // Part 4
+    // Convert the Book and Software subclasses to final classes.
+    // An immutable class
+    //    public final class Book ...
+
     public static void main(String[] args) {
         Scanner keybd = new Scanner(System.in);
         System.out.print("Enter the Book Code: ");
