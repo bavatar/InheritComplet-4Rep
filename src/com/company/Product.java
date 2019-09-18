@@ -14,10 +14,31 @@ public class Product {
         price = 0.0;
     }
 
+    // create an override of the equals method for the superclass
+    @Override
+    public boolean equals(Object obj){
+        // ?
+        boolean test = false;
+
+        if (obj == null){
+            return false;
+        }
+
+        if (!Product.class.isAssignableFrom(obj.getClass())){
+            return false;
+        }
+
+        final Product other = (Product)obj;
+        if (this.code != other.code){
+            test = true;
+        }
+        return test;
+    }
+
     // Get and set accessors for the code, description, and price instance variables
     @Override
     public String toString() {
-        return "Code:                " + code + "\n" +
+        return  "Code:               " + code + "\n" +
                 "Description:        " + description + "\n" +
                 "Price:              " + this.getFormattedPrice() + "\n";
     }

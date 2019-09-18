@@ -21,10 +21,32 @@ public class Book extends Product{
         this.pages = pages;
     }
 
+    @Override
     public String toString(){
         return  "Code:               " + getCode() + "\n" +
                 "Author:             " + getAuthor() + "\n" +
                 "Price:              " + getFormattedPrice() + "\n" +
                 "Description         " + getDescription() + "\n";
+    }
+
+    // create an override of the equals method for the Book subclass.
+    @Override
+    public boolean equals(Object obj){
+        // ?
+        boolean test = false;
+
+        if (obj == null){
+            return false;
+        }
+
+        if (!Product.class.isAssignableFrom(obj.getClass())){
+            return false;
+        }
+
+        final Book other = (Book)obj;
+        if (this.author.equalsIgnoreCase(other.author)){
+            test = true;
+        }
+        return test;
     }
 }

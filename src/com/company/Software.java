@@ -13,6 +13,28 @@ public class Software extends Product {
                 "Software written by " + getProgrammer();
     }
 
+    // create an override of the equals method for the Software subclass.
+    @Override
+    public boolean equals(Object obj){
+        // ?
+        boolean test = false;
+
+        if (obj == null){
+            return false;
+        }
+
+        if (!Product.class.isAssignableFrom(obj.getClass())){
+            return false;
+        }
+
+        final Software other = (Software)obj;
+        if (this.programmer.equalsIgnoreCase(other.programmer)){
+            test = true;
+        }
+        return test;
+    }
+
+
     public String getProgrammer() {
         return programmer;
     }
