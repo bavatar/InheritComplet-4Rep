@@ -2,8 +2,12 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
+    // Part 2
     // Using the code from the previous "Inheritance completion activity #1",
     // create an override of the equals method for the superclass, and Book and Software subclasses.
+    //
+    // Part 3
+    // Using the code from the previous 2 completion activities, convert the Product superclass to an abstract class.
     public static void main(String[] args) {
         Scanner keybd = new Scanner(System.in);
         System.out.print("Enter the Book Code: ");
